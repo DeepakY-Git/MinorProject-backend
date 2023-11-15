@@ -1,0 +1,5 @@
+npm init
+npm i express mongoose dotenv bcrypt jsonwebtoken cookie-parser nodemailer
+
+
+import of routes folder
