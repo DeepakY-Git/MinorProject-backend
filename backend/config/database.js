@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const DB_URL = 'mongodb://127.0.0.1:27017/CAMEO';
+const DB_URL = 'mongodb+srv://dummy:dummy123@cluster0.ycthzlw.mongodb.net/?retryWrites=true&w=majority';
 
 const connectDatabase = () => {
   mongoose

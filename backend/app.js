@@ -3,12 +3,12 @@ const app = express();
 
 import cookieParser from "cookie-parser";
 
-// import path from "path";
-// const path = require("path");
+import path from "path";
 
-// if (process.env.NODE_ENV !== "production") {
-//   require("dotenv").config({ path: "backend/config/config.env" });
-// }
+
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config({ path: "backend/config/config.env" });
+}
 
 // Using Middlewares
 app.use(express.json({ limit: "50mb" }));
@@ -25,11 +25,11 @@ app.use("/api/v1", user);
 
 
 
-// app.use(express.static(path.join(__dirname, "../frontend/build")));
+app.use(express.static(path.join(Frontend, "../frontend/build")));
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-// });
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(Frontend, "../frontend/build/index.html"));
+});
 
 
 export default app;
